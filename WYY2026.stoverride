@@ -1,0 +1,626 @@
+name: WYY 专属策略与分流规则  
+desc: 保留机场最新节点，自动替换为个人策略组与分流规则（适用于 iOS/macOS Stash）
+
+proxy-groups: \#\!replace  
+  \- name: 🚀 节点选择  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    proxies:  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇺🇲 美国节点  
+  \- name: 🚀 手动切换  
+    type: select  
+    include-all: true  
+  \- name: 📲 电报消息  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+      \- DIRECT  
+  \- name: 📲 Tiktok  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 💬 OPENAI  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    proxies:  
+      \- 🇸🇬 狮城节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇺🇲 美国节点  
+      \- 🇯🇵 日本节点  
+  \- name: 💬 人工智能  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 📹 油管视频  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+      \- DIRECT  
+  \- name: 🎥 奈飞视频  
+    type: select  
+    proxies:  
+      \- 🇸🇬 狮城节点  
+      \- 🚀 节点选择  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇺🇲 美国节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎥 DisneyPlus  
+    type: select  
+    proxies:  
+      \- 🇸🇬 狮城节点  
+      \- 🚀 节点选择  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎥 HBO  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇭🇰 香港节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎥 Prime  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎥 Emby  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇺🇲 美国节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 📺 ViuTV  
+    type: select  
+    proxies:  
+      \- 🇭🇰 香港节点  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 📺 巴哈姆特  
+    type: select  
+    proxies:  
+      \- 🇨🇳 台湾节点  
+      \- 🚀 节点选择  
+      \- 🚀 手动切换  
+      \- DIRECT  
+  \- name: 📺 Bilibili港澳台  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🎯 全球直连  
+      \- 🇨🇳 台湾节点  
+      \- 🇭🇰 香港节点  
+  \- name: 🌍 国外媒体  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇺🇲 美国节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+      \- DIRECT  
+  \- name: 🌏 国内媒体  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🚀 手动切换  
+  \- name: 📢 谷歌FCM  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: Ⓜ️ 微软云盘  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: Ⓜ️ 微软服务  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: Ⓜ️ NewBing  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🍎 AppleNews  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🍎 AppleTV  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🍎 AppleApp  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🍎 苹果服务  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎮 游戏平台  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎮 游戏下载  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇺🇲 美国节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎶 网易音乐  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+  \- name: 🎶 Spotify  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+      \- 🇸🇬 狮城节点  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇪🇺 欧洲节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🎯 全球直连  
+    type: select  
+    proxies:  
+      \- DIRECT  
+      \- 🚀 节点选择  
+  \- name: 🛑 广告拦截  
+    type: select  
+    proxies:  
+      \- REJECT  
+      \- DIRECT  
+  \- name: 🍃 应用净化  
+    type: select  
+    proxies:  
+      \- REJECT  
+      \- DIRECT  
+  \- name: 🐟 漏网之鱼  
+    type: select  
+    proxies:  
+      \- 🚀 节点选择  
+      \- DIRECT  
+      \- 🇭🇰 香港节点  
+      \- 🇨🇳 台湾节点  
+      \- 🇸🇬 狮城节点  
+      \- 🇯🇵 日本节点  
+      \- 🇺🇲 美国节点  
+      \- 🇰🇷 韩国节点  
+      \- 🚀 手动切换  
+  \- name: 🇭🇰 香港节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "香港|HK|Hong"  
+  \- name: 🇯🇵 日本节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "日本|JP|Japan"  
+  \- name: 🇺🇲 美国节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "美国|US|States"  
+  \- name: 🇨🇳 台湾节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "台湾|TW|Taiwan"  
+  \- name: 🇸🇬 狮城节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "新加坡|狮城|SG|Singapore"  
+  \- name: 🇰🇷 韩国节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "韩国|KR|Korea"  
+  \- name: 🇪🇺 欧洲节点  
+    type: url-test  
+    url: http\://www\.gstatic.com/generate\_204  
+    interval: 300  
+    tolerance: 50  
+    include-all: true  
+    filter: "英国|荷兰|UK|NL|德国|法国|欧洲"
+
+rules: \#\!replace  
+  \- DOMAIN-SUFFIX,futu5.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu6.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu0.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu1.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu2.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu3.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu4.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu7.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu8.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futu9.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futunn.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,qquote.futunn.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,fututrade.hk,💬 OPENAI  
+  \- DOMAIN-SUFFIX,fututrade.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futufin.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuhk2.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuhk.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuhkapp.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuinc.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,fututrustee.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futubull.cn,💬 OPENAI  
+  \- DOMAIN-SUFFIX,cdn.futustatic.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futustatic.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuchain.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,futuniuniu.com,💬 OPENAI  
+  \- IP-CIDR,170.106.201.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,175.178.207.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,42.194.152.250/32,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.132.106.6/32,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.132.106.8/32,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.132.138.67/32,💬 OPENAI,no-resolve  
+  \- IP-CIDR,1.15.158.235/32,💬 OPENAI,no-resolve  
+  \- IP-CIDR,1.14.242.0/23,💬 OPENAI,no-resolve  
+  \- IP-CIDR,14.152.91.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,38.65.217.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,42.193.128.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.130.30.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.130.170.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.132.107.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.135.64.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.135.82.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.142.232.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.145.30.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.153.191.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.153.233.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,43.160.156.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,49.51.78.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,49.234.241.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,101.32.198.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,106.55.66.0/23,💬 OPENAI,no-resolve  
+  \- IP-CIDR,111.230.119.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,111.230.214.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.28.37.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.28.141.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.28.183.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.29.48.0/23,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.91.245.0/23,💬 OPENAI,no-resolve  
+  \- IP-CIDR,119.147.110.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,121.5.97.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,124.156.124.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,124.156.233.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,124.156.234.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,129.226.79.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,129.226.111.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,162.14.10.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,170.106.48.0/23,💬 OPENAI,no-resolve  
+  \- IP-CIDR,170.106.62.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,183.60.225.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,193.112.84.0/24,💬 OPENAI,no-resolve  
+  \- IP-CIDR,193.112.234.0/24,💬 OPENAI,no-resolve  
+  \- DOMAIN,ai.google.dev,💬 OPENAI  
+  \- DOMAIN-SUFFIX,generativelanguage.googleapis.com,💬 OPENAI  
+  \- DOMAIN,alkalimakersuite-pa.clients6.google.com,💬 OPENAI  
+  \- DOMAIN,makersuite.google.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,bard.google.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,deepmind.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,deepmind.google,💬 OPENAI  
+  \- DOMAIN-SUFFIX,gemini.google.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,generativeai.google,💬 OPENAI  
+  \- DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,apis.google.com,💬 OPENAI  
+  \- DOMAIN-KEYWORD,colab,💬 OPENAI  
+  \- DOMAIN-KEYWORD,developerprofiles,💬 OPENAI  
+  \- DOMAIN-KEYWORD,generativelanguage,💬 OPENAI  
+  \- DOMAIN-SUFFIX,ai.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,chatgpt.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,chatgpt.livekit.cloud,💬 OPENAI  
+  \- DOMAIN-SUFFIX,oaistatic.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,oaiusercontent.com,💬 OPENAI  
+  \- DOMAIN-SUFFIX,openai.com,💬 OPENAI  
+  \- DOMAIN-KEYWORD,openai,💬 OPENAI  
+  \- DOMAIN-SUFFIX,perplexity.ai,💬 人工智能  
+  \- DOMAIN-SUFFIX,pplx.ai,💬 人工智能  
+  \- DOMAIN-SUFFIX,anthropic.com,💬 人工智能  
+  \- DOMAIN-SUFFIX,claude.ai,💬 人工智能  
+  \- DOMAIN-SUFFIX,local,🎯 全球直连  
+  \- DOMAIN-SUFFIX,localhost,🎯 全球直连  
+  \- IP-CIDR,127.0.0.0/8,🎯 全球直连,no-resolve  
+  \- IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve  
+  \- IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve  
+  \- IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve  
+  \- DOMAIN,mtalk.google.com,📢 谷歌FCM  
+  \- DOMAIN-KEYWORD,onedrive,Ⓜ️ 微软云盘  
+  \- DOMAIN-SUFFIX,onedrive.live.com,Ⓜ️ 微软云盘  
+  \- DOMAIN-SUFFIX,sharepoint.com,Ⓜ️ 微软云盘  
+  \- DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,bing.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,live.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,office365.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,outlook.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,windows.com,Ⓜ️ 微软服务  
+  \- DOMAIN-SUFFIX,tv.apple.com,🍎 AppleTV  
+  \- DOMAIN-SUFFIX,podcasts.apple.com,🍎 AppleApp  
+  \- DOMAIN-SUFFIX,apple.com,🍎 苹果服务  
+  \- DOMAIN-SUFFIX,icloud.com,🍎 苹果服务  
+  \- DOMAIN-SUFFIX,itunes.com,🍎 苹果服务  
+  \- DOMAIN-SUFFIX,mzstatic.com,🍎 苹果服务  
+  \- DOMAIN-SUFFIX,t.me,📲 电报消息  
+  \- DOMAIN-SUFFIX,tdesktop.com,📲 电报消息  
+  \- DOMAIN-SUFFIX,telegra.ph,📲 电报消息  
+  \- DOMAIN-SUFFIX,telegram.me,📲 电报消息  
+  \- DOMAIN-SUFFIX,telegram.org,📲 电报消息  
+  \- IP-CIDR,91.108.0.0/16,📲 电报消息,no-resolve  
+  \- IP-CIDR,109.239.140.0/24,📲 电报消息,no-resolve  
+  \- IP-CIDR,149.154.160.0/20,📲 电报消息,no-resolve  
+  \- DOMAIN-SUFFIX,tiktok.com,📲 Tiktok  
+  \- DOMAIN-SUFFIX,tiktokv.com,📲 Tiktok  
+  \- DOMAIN-SUFFIX,tiktokcdn.com,📲 Tiktok  
+  \- DOMAIN-KEYWORD,tiktok,📲 Tiktok  
+  \- DOMAIN-SUFFIX,spotify.com,🎶 Spotify  
+  \- DOMAIN-SUFFIX,scdn.co,🎶 Spotify  
+  \- DOMAIN-KEYWORD,youtube,📹 油管视频  
+  \- DOMAIN-SUFFIX,youtu.be,📹 油管视频  
+  \- DOMAIN-SUFFIX,youtube.com,📹 油管视频  
+  \- DOMAIN-SUFFIX,googlevideo.com,📹 油管视频  
+  \- DOMAIN-SUFFIX,ytimg.com,📹 油管视频  
+  \- DOMAIN-SUFFIX,netflix.com,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,netflix.net,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,nflximg.com,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,nflximg.net,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,nflxvideo.net,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,fast.com,🎥 奈飞视频  
+  \- DOMAIN-SUFFIX,disneyplus.com,🎥 DisneyPlus  
+  \- DOMAIN-SUFFIX,disney-plus.net,🎥 DisneyPlus  
+  \- DOMAIN-SUFFIX,disneystreaming.com,🎥 DisneyPlus  
+  \- DOMAIN-SUFFIX,bamgrid.com,🎥 DisneyPlus  
+  \- DOMAIN-SUFFIX,hbo.com,🎥 HBO  
+  \- DOMAIN-SUFFIX,hbogo.com,🎥 HBO  
+  \- DOMAIN-SUFFIX,hbomax.com,🎥 HBO  
+  \- DOMAIN-SUFFIX,max.com,🎥 HBO  
+  \- DOMAIN-SUFFIX,primevideo.com,🎥 Prime  
+  \- DOMAIN-SUFFIX,amazonvideo.com,🎥 Prime  
+  \- DOMAIN-KEYWORD,emby,🎥 Emby  
+  \- DOMAIN-SUFFIX,viu.com,📺 ViuTV  
+  \- DOMAIN-SUFFIX,viu.tv,📺 ViuTV  
+  \- DOMAIN-SUFFIX,bahamut.com.tw,📺 巴哈姆特  
+  \- DOMAIN-SUFFIX,gamer.com.tw,📺 巴哈姆特  
+  \- DOMAIN-SUFFIX,steampowered.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,steamcommunity.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,steamstatic.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,battle.net,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,blizzard.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,playstation.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,nintendo.com,🎮 游戏平台  
+  \- DOMAIN-SUFFIX,xbox.com,🎮 游戏平台  
+  \- DOMAIN-KEYWORD,google,🚀 节点选择  
+  \- DOMAIN-SUFFIX,googleapis.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,gstatic.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,gmail.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,github.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,github.io,🚀 节点选择  
+  \- DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,twitter.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,x.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,twimg.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,facebook.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,fb.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,instagram.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,cdninstagram.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,threads.net,🚀 节点选择  
+  \- DOMAIN-SUFFIX,discord.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,discord.gg,🚀 节点选择  
+  \- DOMAIN-SUFFIX,reddit.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,wikipedia.org,🚀 节点选择  
+  \- DOMAIN-SUFFIX,whatsapp.com,🚀 节点选择  
+  \- DOMAIN-SUFFIX,line.me,🚀 节点选择  
+  \- DOMAIN-SUFFIX,pixiv.net,🚀 节点选择  
+  \- DOMAIN-SUFFIX,notion.so,🚀 节点选择  
+  \- DOMAIN-SUFFIX,bilibili.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,hdslb.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,b23.tv,🎯 全球直连  
+  \- DOMAIN-SUFFIX,baidu.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,qq.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,weixin.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,wechat.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,taobao.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,tmall.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,alipay.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,alicdn.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,jd.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,163.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,126.net,🎯 全球直连  
+  \- DOMAIN-SUFFIX,sina.com.cn,🎯 全球直连  
+  \- DOMAIN-SUFFIX,weibo.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,douyin.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,xiaohongshu.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,zhihu.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,meituan.com,🎯 全球直连  
+  \- DOMAIN-SUFFIX,cn,🎯 全球直连  
+  \- GEOIP,CN,🎯 全球直连  
+  \- MATCH,🐟 漏网之鱼  
